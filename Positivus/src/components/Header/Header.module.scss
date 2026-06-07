@@ -1,0 +1,43 @@
+.header{
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 60px;
+    }
+    &__logo {
+        max-width: 220px;
+        max-height: 36px;
+    }
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 70%; 
+        justify-content: space-between;
+        nav {
+            flex-grow: 1;
+            margin-right: 40px; 
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+       
+    }
+
+    &__button {
+        padding: 20px 35px;
+        border: 1px solid var(--black);
+        border-radius: 14px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        &:hover {
+            transform: translateY(-2px); 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); 
+        }
+    }
+}

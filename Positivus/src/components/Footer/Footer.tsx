@@ -1,11 +1,13 @@
+import Button from '../Button/Button';
 import s from './Footer.module.scss';
+
 
 const Footer = () => {
     return (
     <footer>
-        {/* <div className="container"> */}
             <div className={s.footer__wrapper}>
-                <div className={s.footer__logo}><img src='/logo.svg'/></div>
+                <div className={s.footer__top}>
+                <div className={s.footer__logo}><img src='/logoWhite.svg' alt='logo'/></div>
                 <div className={s.footer__nav}>
                     <nav>
                         <ul>
@@ -28,11 +30,24 @@ const Footer = () => {
                         <img src='/socials/twitter.svg' alt='twitter'/>
                     </a>
                 </div>
+                </div>
+                <div  className={s.footer__middle}>
+                    <div className={s.footer__contact}>
+                        <h1>Contact us:</h1>
+                        <p>Email: info@positivus.com</p>
+                        <p>Phone: 555-567-8901</p>
+                        <p>Address: 1234 Main St
+                        Moonstone City, Stardust State 12345</p>
+                    </div>
+                    <div className={s.footer__subscribe}>
+                        <input />
+                        <Button title='Subscribe to news'/>
+                    </div>
+                </div>
                 <div className={s.footer__license}>
                     © 2026 Positivus. All Rights Reserved.
                 </div>
             </div>
-        {/* </div> */}
     </footer> );
 }
  

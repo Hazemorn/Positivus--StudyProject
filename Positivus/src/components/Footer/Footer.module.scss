@@ -1,8 +1,30 @@
 .footer {
-    & > * {
-        color: var(--white);
-    }
     &__wrapper {
-        background-color: var(--dark);
+        padding: 60px;
+        background-color: var(--dark); 
+        border-radius: 45px 45px 0 0;  
+    }
+    &__wrapper > * {
+        color: var(--white);
+    } 
+    &__nav ul {
+        display: flex;
+        gap: 40px;
+        text-decoration: underline;
+        li a {
+            color: var(--white);
+        }
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    
+
+
+    &__subscribe {
+        background-color: var(--dark-gray);
     }
 }

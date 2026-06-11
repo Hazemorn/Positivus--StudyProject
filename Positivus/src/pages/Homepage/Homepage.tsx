@@ -1,4 +1,4 @@
-// import Footer from "../../components/Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
 import CardService from "../../components/CardService/CardService";
 import Header from "../../components/Header/Header";
@@ -83,7 +83,7 @@ const Homepage = () => {
             </div>
           </div>
         </section>
-        {/* <Footer/> */}
+        <Footer/>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import s from './Footer.module.scss';
 
 const Footer = () => {
     return (
-    <footer>
+    <footer className={s.footer}>
             <div className={s.footer__wrapper}>
                 <div className={s.footer__top}>
                 <div className={s.footer__logo}><img src='/logoWhite.svg' alt='logo'/></div>
@@ -40,12 +40,14 @@ const Footer = () => {
                         Moonstone City, Stardust State 12345</p>
                     </div>
                     <div className={s.footer__subscribe}>
-                        <input />
-                        <Button title='Subscribe to news'/>
+                        <input type='email' placeholder="Email" autoComplete="email" minLength={5} maxLength={50}/>
+                        <Button title='Subscribe to news' bgColor='var(--accent)' color='var(--black)'/>
                     </div>
                 </div>
+                <hr className={s.footer__lineSeparator}/>
                 <div className={s.footer__license}>
-                    © 2026 Positivus. All Rights Reserved.
+                    <p>© 2026 Positivus. All Rights Reserved.</p>
+                    <a href='#!'>Privacy Policy</a>
                 </div>
             </div>
     </footer> );

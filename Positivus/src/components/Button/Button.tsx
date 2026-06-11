@@ -4,11 +4,12 @@ interface ButtonProps {
   title: string;
   max_width?: string;
   bgColor?: string;
+  color?: string;
 }
 
-const Button = ({ title, bgColor = 'var(--dark)', max_width =' 280px' }: ButtonProps) => {
+const Button = ({ title, bgColor = 'var(--dark)', max_width =' 280px', color ='var(--white)' }: ButtonProps) => {
   return (
-    <button className={s.button__template} style={{ backgroundColor: bgColor, maxWidth:max_width }}>
+    <button className={s.button__template} style={{ backgroundColor: bgColor, maxWidth:max_width, color: color }}>
       {title}
     </button>
   );

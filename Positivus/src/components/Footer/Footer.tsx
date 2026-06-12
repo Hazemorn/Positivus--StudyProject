@@ -1,13 +1,18 @@
 import Button from '../Button/Button';
 import s from './Footer.module.scss';
 
+import LogoWhite from '/logoWhite.svg';
+import LinkedInImg from '../../assets/socials/linkedIn.svg';
+import FacebookImg from '../../assets/socials/facebook.svg';
+import TwitterImg from '../../assets/socials/twitter.svg';
+
 
 const Footer = () => {
     return (
     <footer className={s.footer}>
             <div className={s.footer__wrapper}>
                 <div className={s.footer__top}>
-                <div className={s.footer__logo}><img src='/logoWhite.svg' alt='logo'/></div>
+                <div className={s.footer__logo}><img src={LogoWhite} alt='logo'/></div>
                 <div className={s.footer__nav}>
                     <nav>
                         <ul>
@@ -21,19 +26,19 @@ const Footer = () => {
                 </div>
                 <div className={s.footer__socials}>
                     <a href="https://linkedIn.com" target="_blank" rel="noopener noreferrer">
-                        <img src='/socials/linkedIn.svg' alt='linkedIn'/>
+                        <img src={LinkedInImg} alt='linkedIn'/>
                     </a>
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                        <img src='/socials/facebook.svg' alt='facebook'/>
+                        <img src={FacebookImg} alt='facebook'/>
                     </a>
                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                        <img src='/socials/twitter.svg' alt='twitter'/>
+                        <img src={TwitterImg} alt='twitter'/>
                     </a>
                 </div>
                 </div>
                 <div  className={s.footer__middle}>
                     <div className={s.footer__contact}>
-                        <h1>Contact us:</h1>
+                        <h2>Contact us:</h2>
                         <p>Email: info@positivus.com</p>
                         <p>Phone: 555-567-8901</p>
                         <p>Address: 1234 Main St

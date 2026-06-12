@@ -2,7 +2,18 @@ import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
 import CardService from "../../components/CardService/CardService";
 import Header from "../../components/Header/Header";
+import ContactUs from "../../components/ContactUs/ContactUs";
+
 import s from "./Homepage.module.scss";
+
+import HeroImg from "../../assets/homepage/hero.svg";
+import ProposalImg from "../../assets/homepage/proposal.svg";
+import AmazonImg from "../../assets/logos/amazon.svg";
+import DribbbleImg from "../../assets/logos/dribbble.svg";
+import HubSpotImg from "../../assets/logos/hubSpot.svg";
+import NotionImg from "../../assets/logos/notion.svg";
+import NetflixImg from "../../assets/logos/netflix.svg"; 
+import ZoomImg from "../../assets/logos/zoom.svg";
 
 interface Company {
   id: number;
@@ -11,12 +22,12 @@ interface Company {
 }
 
 const COMPANIES: Company[] = [
-  { id: 1, name: "Amazon", src: "/logos/amazon.svg" },
-  { id: 2, name: "Dribbble", src: "/logos/dribbble.svg" },
-  { id: 3, name: "HubSpot", src: "/logos/hubSpot.svg" },
-  { id: 4, name: "Notion", src: "/logos/notion.svg" },
-  { id: 5, name: "Netflix", src: "/logos/netflix.svg" },
-  { id: 6, name: "Zoom", src: "/logos/zoom.svg" },
+  { id: 1, name: "Amazon", src: AmazonImg },
+  { id: 2, name: "Dribbble", src: DribbbleImg },
+  { id: 3, name: "HubSpot", src: HubSpotImg },
+  { id: 4, name: "Notion", src: NotionImg },
+  { id: 5, name: "Netflix", src: NetflixImg },
+  { id: 6, name: "Zoom", src: ZoomImg },
 ];
 
 const Homepage = () => {
@@ -36,7 +47,7 @@ const Homepage = () => {
               <Button title="Book a consultation" />
             </div>
             <div className={s.hero__img}>
-              <img src="/homepage/hero.svg" alt="hero-img" />
+              <img src={HeroImg} alt="hero-img" />
             </div>
           </div>
         </section>
@@ -55,8 +66,8 @@ const Homepage = () => {
 
         <section className={s.services}>
           <div className={s.services__wrapper}>
-            <div className={s.services__header}>
-              <h1>Services</h1>
+            <div className={s.services__top}>
+              <h2>Services</h2>
               <p>
                 At our digital marketing agency, we offer a range of services to
                 help businesses grow and succeed online. These services include:
@@ -79,10 +90,12 @@ const Homepage = () => {
               <Button title="Get your free proposal" />
             </div>
             <div className={s.proposal__img}>
-              <img src="/homepage/proposal.svg" alt="proposal" />
+              <img src={ProposalImg} alt="proposal" />
             </div>
           </div>
         </section>
+
+        <ContactUs/>
         <Footer/>
       </div>
     </div>

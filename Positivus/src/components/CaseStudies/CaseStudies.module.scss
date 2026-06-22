@@ -1,0 +1,41 @@
+@use '../../assets/mixins.scss' as *;
+
+.case {
+    &__wrapper {
+        @include flex-dir(column);
+        gap: 80px;
+    }
+    &__body {
+        background-color: var(--black);
+        border-radius: 45px;
+        padding: 70px 60px 93px;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+        width: 100%;
+    }
+    &__card {
+        color: var(--white);
+         padding-right: 30px;
+        &:not(:last-child) {
+            border-right: 1px solid var(--white);
+        }
+        p {
+            padding-bottom: 20px;
+        }
+    }
+    
+    &__arrow {
+        a {
+            @include flex-dir(row);
+            gap: 15px;
+        }
+        span {
+            color: var(--accent);
+        }
+    }
+    
+}

@@ -1,9 +1,9 @@
+@use '../../assets/mixins.scss' as *;
+
 .header{
     &__wrapper {
-        display: flex;
+        @include flex-hybrid(space-between, center);
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
         padding-top: 60px;
     }
     &__logo {
@@ -11,19 +11,16 @@
         max-height: 36px;
     }
     &__nav {
-        display: flex;
+        @include flex-hybrid(space-between, center);
         flex-direction: row;
-        align-items: center;
         width: 70%; 
-        justify-content: space-between;
         nav {
             flex-grow: 1;
             margin-right: 40px; 
         }
 
         nav ul {
-            display: flex;
-            flex-direction: row;
+            @include flex-dir(row);
             justify-content: space-between;
         }
        

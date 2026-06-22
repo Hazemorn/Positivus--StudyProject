@@ -11,12 +11,6 @@
         flex-direction: column;
         gap: 35px;
         max-width: 600px; 
-        h1 {
-            font-size: 60px;
-            line-height: 100%;
-            letter-spacing: 0%;
-            font-weight: 500;
-        }
         p {
             font-size: 20px;
             line-height: 28px;
@@ -25,7 +19,7 @@
     
     }
     &__img {
-        width: 600px;
+        max-width: 600px;
         height: auto;
         img {
             width: 100%;
@@ -95,7 +89,7 @@
     }
     &__img {
         position: absolute;
-        width: 500px;
+        max-width: 500px;
         height: auto;
         right: 60px;
         img {

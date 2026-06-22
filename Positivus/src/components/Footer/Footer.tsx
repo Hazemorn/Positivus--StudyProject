@@ -45,7 +45,7 @@ const Footer = () => {
                         Moonstone City, Stardust State 12345</p>
                     </div>
                     <div className={s.footer__subscribe}>
-                        <input type='email' placeholder="Email" autoComplete="email" minLength={5} maxLength={50}/>
+                        <input type='email' name='email' placeholder="Email" autoComplete="email" minLength={5} maxLength={50}/>
                         <Button title='Subscribe to news' bgColor='var(--accent)' color='var(--black)'/>
                     </div>
                 </div>

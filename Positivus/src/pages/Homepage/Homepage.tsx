@@ -14,6 +14,7 @@ import HubSpotImg from "../../assets/logos/hubSpot.svg";
 import NotionImg from "../../assets/logos/notion.svg";
 import NetflixImg from "../../assets/logos/netflix.svg"; 
 import ZoomImg from "../../assets/logos/zoom.svg";
+import CaseStudies from "../../components/CaseStudies/CaseStudies";
 
 interface Company {
   id: number;
@@ -94,6 +95,7 @@ const Homepage = () => {
             </div>
           </div>
         </section>
+        <CaseStudies/>
 
         <ContactUs/>
         <Footer/>

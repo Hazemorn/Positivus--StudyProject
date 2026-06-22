@@ -1,3 +1,5 @@
+@use '../../assets/mixins.scss' as *;
+
 .footer {
     padding-top: 140px;
     &__wrapper {
@@ -17,9 +19,7 @@
         }
     }
     &__top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex-hybrid(space-between, center);
     }
 
     &__socials {
@@ -37,29 +37,25 @@
 
     &__middle {
         padding-top: 65px;
-        display: flex;
-        justify-content: space-between;
+        @include flex-hybrid(space-between, none);
         padding-bottom: 50px;
         
     }
     &__contact {
-        display: flex;
-        flex-direction: column;
+        @include flex-dir(column);
         gap: 27px;
-        max-width: 320px;
         h2 {
-            max-width: 120px;
+            max-width: 130px;
             color: var(--black);
+            font-size: 20px;
         }
     }
 
 
     &__subscribe {
         background-color: var(--dark-gray);
-        display: flex;
-        align-items: center; 
-        justify-content: space-around;
-        gap:20px;
+        @include flex-hybrid(space-around, center);
+        gap: 20px;
         padding: 58px 40px;
         input {
             max-width: 285px;

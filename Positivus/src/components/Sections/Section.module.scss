@@ -1,0 +1,14 @@
+@use '../../assets/mixins.scss' as *;
+
+.sections {
+    padding-top: 140px;
+    &__wrapper {
+        @include flex-dir(column);
+        gap: 80px;
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+}

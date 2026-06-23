@@ -1,22 +1,6 @@
 @use '../../assets/mixins.scss' as *;
 
 .contact_us {
-    padding-top: 140px;
-    &__wrapper {
-        @include flex-dir(column);
-        gap: 80px;
-    }
-
-    &__top {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        max-width: 600px;
-        p {
-            max-width: 320px;
-        }
-    }
-
     &__body {
         @include flex-dir(row);
         justify-content: space-between;

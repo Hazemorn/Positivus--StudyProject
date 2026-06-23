@@ -7,11 +7,6 @@ const ContactUs = () => {
   return (
     <>
       <section className={s.contact_us}>
-        <div className={s.contact_us__wrapper}>
-          <div className={s.contact_us__top}>
-            <h2>Contact Us</h2>
-            <p>Connect with Us: Let's Discuss Your Digital Marketing Needs</p>
-          </div>
           <div className={s.contact_us__body}>
             <div className={s.contact_us__text}>
               <div className={s.contact_us__type}>
@@ -68,7 +63,6 @@ const ContactUs = () => {
               <img src={contactUsImg} alt="contactUs__img" />
             </div>
           </div>
-        </div>
       </section>
     </>
   );

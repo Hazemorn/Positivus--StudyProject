@@ -16,14 +16,6 @@ const CaseStudies = () => {
   return (
     <>
       <section className={s.case}>
-        <div className={s.case__wrapper}>
-          <div className={s.case__top}>
-            <h2>Case Studies</h2>
-            <p>
-              Explore Real-Life Examples of Our Proven Digital Marketing Success
-              through Our Case Studies
-            </p>
-          </div>
           <div className={s.case__body}>
              <div className={s.case__content}>
                 {CASE.map(n => (
@@ -35,12 +27,10 @@ const CaseStudies = () => {
                                 <img src={ArrowImg} alt="Arrow" />
                             </a>
                         </div>
-                    </div> 
-                     
+                    </div>     
                 ))}
              </div>
           </div>
-        </div>
       </section>
     </>
   );

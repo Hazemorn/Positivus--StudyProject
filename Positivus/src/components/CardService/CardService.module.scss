@@ -1,0 +1,37 @@
+@use '../../assets/mixins.scss' as *;
+
+.service {
+    max-width: 600px;
+    border-radius: 45px;
+    width: 100%; 
+    border: 1px solid var(--black);
+    border-bottom-width: 5px;
+    &__wrapper {
+        padding: 50px;
+        @include flex-hybrid(space-between, center);
+        &[data-bg-black='true'] {
+            .learnMore {
+                color: var(--white);
+            }
+        }
+    }
+
+
+    &__text {
+        @include flex-dir(column);
+        gap: 93px;
+        h3 {
+            @include flex-dir(column);
+        }
+        a {
+            @include flex-dir(row);
+            align-items: center;
+            gap: 15px;
+        }
+        span {
+            border-radius: 7px;
+            padding: 7px;
+            width: fit-content;
+        }
+    }
+}

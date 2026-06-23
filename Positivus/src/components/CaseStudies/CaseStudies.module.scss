@@ -1,10 +1,6 @@
 @use '../../assets/mixins.scss' as *;
 
 .case {
-    &__wrapper {
-        @include flex-dir(column);
-        gap: 80px;
-    }
     &__body {
         background-color: var(--black);
         border-radius: 45px;

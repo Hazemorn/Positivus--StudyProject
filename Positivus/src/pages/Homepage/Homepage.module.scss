@@ -106,3 +106,8 @@
     flex-wrap: wrap;
     gap: 40px;
 }
+
+.process {
+    @include flex-dir(column);
+    gap: 30px;
+}

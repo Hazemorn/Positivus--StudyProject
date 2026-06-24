@@ -1,0 +1,47 @@
+@use '../../assets/mixins.scss' as *;
+
+.process {
+    background-color: var(--grey);
+    border-radius: 45px;
+    @include border-card;
+    box-sizing: border-box;
+    &.open {
+        background-color: var(--accent);
+    }
+    &__wrapper {
+        padding: 41px 60px;
+        @include flex-dir(column);
+        &.open { 
+            gap: 30px;
+        }
+    }
+    &__top {
+        @include flex-hybrid(space-between, center);
+        button {
+            border-radius: 50%;
+            width: 58px;
+            height: 58px;
+            border: 1px solid var(--black);
+            background-color: var(--grey);
+            //@include flex-hybrid(center, center);
+        }
+    }
+    &__title {
+        @include flex-hybrid(none, center);
+        gap: 25px;
+    }
+    &__bottom {
+        &.open {
+        border-top: 1px solid var(--black);
+        padding-top: 30px;
+        }
+    }
+    &__collapse {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3;
+        &.open {
+            height: auto;
+        }
+    }
+}

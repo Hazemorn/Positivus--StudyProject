@@ -31,6 +31,7 @@ import MichaelBrownImg from "../../assets/cardTeam/MichaelBrown.svg";
 import EmilyJohnsonImg from "../../assets/cardTeam/EmilyJohnson.svg";
 import BrianWilliamsImg from "../../assets/cardTeam/Brian Williams.svg";
 import SarahKimImg from "../../assets/cardTeam/SarahKim.svg";
+import CardProcess from "../../components/CardProcess/CardProcess";
 
 interface Company {
   id: number;
@@ -47,7 +48,7 @@ const COMPANIES: Company[] = [
   { id: 6, name: "Zoom", src: ZoomImg },
 ];
 
-interface Services {
+interface Service {
   id: number;
   titleTop: string;
   titleBottom: string;
@@ -56,14 +57,56 @@ interface Services {
   cardColor: string;
 }
 
-const Service: Services[] = [
-  { id: 1, titleTop: "Search engine", titleBottom:"optimization" , src: searchImg, bgText: "var(--accent)", cardColor: "var(--grey)"},
-  { id: 2, titleTop: "Pay-per-click", titleBottom: "advertising", src: clickImg, bgText: "var(--white)", cardColor: "var(--accent)"},
-  { id: 3, titleTop: "Social Media", titleBottom: "Marketing", src: socialImg, bgText: "var(--white)", cardColor: "var(--black)"},
-  { id: 4, titleTop: "Email", titleBottom: "Marketing", src: emailImg, bgText: "var(--accent)", cardColor: "var(--grey)"},
-  { id: 5, titleTop: "Content", titleBottom: "Creation", src: contentImg, bgText: "var(--white)", cardColor: "var(--accent)"},
-  { id: 6, titleTop: "Analytics and", titleBottom: "Tracking", src: analyticsImg, bgText: "var(--accent)", cardColor: "var(--black)"},
-]
+const SERVICES: Service[] = [
+  {
+    id: 1,
+    titleTop: "Search engine",
+    titleBottom: "optimization",
+    src: searchImg,
+    bgText: "var(--accent)",
+    cardColor: "var(--grey)",
+  },
+  {
+    id: 2,
+    titleTop: "Pay-per-click",
+    titleBottom: "advertising",
+    src: clickImg,
+    bgText: "var(--white)",
+    cardColor: "var(--accent)",
+  },
+  {
+    id: 3,
+    titleTop: "Social Media",
+    titleBottom: "Marketing",
+    src: socialImg,
+    bgText: "var(--white)",
+    cardColor: "var(--black)",
+  },
+  {
+    id: 4,
+    titleTop: "Email",
+    titleBottom: "Marketing",
+    src: emailImg,
+    bgText: "var(--accent)",
+    cardColor: "var(--grey)",
+  },
+  {
+    id: 5,
+    titleTop: "Content",
+    titleBottom: "Creation",
+    src: contentImg,
+    bgText: "var(--white)",
+    cardColor: "var(--accent)",
+  },
+  {
+    id: 6,
+    titleTop: "Analytics and",
+    titleBottom: "Tracking",
+    src: analyticsImg,
+    bgText: "var(--accent)",
+    cardColor: "var(--black)",
+  },
+];
 
 interface Team {
   id: number;
@@ -73,15 +116,89 @@ interface Team {
   text: string;
 }
 
-const Team: Team[] = [
-  { id: 1, src: JohnSmithImg, name: "John Smith", position: "CEO and Founder", text: "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy"},
-  { id: 1, src: JaneDoeImg, name: "Jane Doe", position: "CEO and Founder", text: "7+ years of experience in project management and team leadership. Strong organizational and communication skills"},
-  { id: 1, src: MichaelBrownImg, name: "Michael Brown", position: "Senior SEO Specialist", text: "5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization"},
-  { id: 1, src: EmilyJohnsonImg, name: "Emily Johnson", position: "PPC Manager", text: "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis"},
-  { id: 1, src: BrianWilliamsImg, name: "Brian Williams", position: "Social Media Specialist", text: "4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement"},
-  { id: 1, src: SarahKimImg, name: "Sarah Kim", position: "Content Creator", text: "2+ years of experience in writing and editing. Skilled in creating compelling, SEO-optimized content for various industries"},
+const TEAM: Team[] = [
+  {
+    id: 1,
+    src: JohnSmithImg,
+    name: "John Smith",
+    position: "CEO and Founder",
+    text: "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
+  },
+  {
+    id: 2,
+    src: JaneDoeImg,
+    name: "Jane Doe",
+    position: "CEO and Founder",
+    text: "7+ years of experience in project management and team leadership. Strong organizational and communication skills",
+  },
+  {
+    id: 3,
+    src: MichaelBrownImg,
+    name: "Michael Brown",
+    position: "Senior SEO Specialist",
+    text: "5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization",
+  },
+  {
+    id: 4,
+    src: EmilyJohnsonImg,
+    name: "Emily Johnson",
+    position: "PPC Manager",
+    text: "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
+  },
+  {
+    id: 5,
+    src: BrianWilliamsImg,
+    name: "Brian Williams",
+    position: "Social Media Specialist",
+    text: "4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement",
+  },
+  {
+    id: 6,
+    src: SarahKimImg,
+    name: "Sarah Kim",
+    position: "Content Creator",
+    text: "2+ years of experience in writing and editing. Skilled in creating compelling, SEO-optimized content for various industries",
+  },
+];
 
-]
+interface Process {
+  id: number;
+  title: string;
+  text: string;
+}
+
+const PROCESS: Process[] = [
+  {
+    id: 1,
+    title: "Consultation",
+    text: "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    id: 2,
+    title: "Research and Strategy Development",
+    text: "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    id: 3,
+    title: "Implementation",
+    text: "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    id: 4,
+    title: "Monitoring and Optimization",
+    text: "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    id: 5,
+    title: "Reporting and Communication",
+    text: "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    id: 6,
+    title: "Continual Improvement",
+    text: "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+];
 
 const Homepage = () => {
   return (
@@ -117,27 +234,26 @@ const Homepage = () => {
           </div>
         </section>
 
-
-        <Sections 
-            title="Services"
-            subtitle="At our digital marketing agency, we offer a range of services to
+        <Sections
+          title="Services"
+          subtitle="At our digital marketing agency, we offer a range of services to
                 help businesses grow and succeed online. These services include:"
-            width="px"
-            pWidth="580px"
-            body={
-              <section className={s.services}>
-                {Service.map( item => (
-                    <CardService 
-                      key={item.id}
-                      titleTop={item.titleTop}
-                      titleBottom={item.titleBottom}
-                      src={item.src}
-                      bgText={item.bgText}
-                      cardColor={item.cardColor}
-                        />
-                  ))}
-              </section>
-            }
+          width="px"
+          pWidth="580px"
+          body={
+            <section className={s.services}>
+              {SERVICES.map((item) => (
+                <CardService
+                  key={item.id}
+                  titleTop={item.titleTop}
+                  titleBottom={item.titleBottom}
+                  src={item.src}
+                  bgText={item.bgText}
+                  cardColor={item.cardColor}
+                />
+              ))}
+            </section>
+          }
         />
 
         <section className={s.proposal}>
@@ -163,22 +279,42 @@ const Homepage = () => {
           body={<CaseStudies />}
         />
 
-      <Sections 
+        <Sections
+          title="Our Working Process"
+          subtitle="Step-by-Step Guide to . Your Business Goals"
+          width="770px"
+          pWidth="300px"
+          body={
+            <div className={s.process}>
+              {PROCESS.map((item) => (
+                <CardProcess
+                  key={item.id}
+                  id={item.id}
+                  title={item.title}
+                  text={item.text}
+                />
+              ))}
+            </div>
+          }
+        />
+
+        <Sections
           title="Team"
           subtitle="Meet the skilled and experienced team behind our successful digital marketing strategies"
           pWidth="475px"
           body={
-          <section className={s.team}>
-            {Team.map(item => (
-              <CardTeam 
-                key={item.id}
-                src={item.src}
-                name={item.name}
-                position={item.position}
-                text={item.text}
-              />
-            ))}
-          </section>}
+            <section className={s.team}>
+              {TEAM.map((item) => (
+                <CardTeam
+                  key={item.id}
+                  src={item.src}
+                  name={item.name}
+                  position={item.position}
+                  text={item.text}
+                />
+              ))}
+            </section>
+          }
         />
 
         <Sections

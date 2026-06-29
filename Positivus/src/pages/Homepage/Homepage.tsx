@@ -1,10 +1,16 @@
+import { useState } from 'react';
+import { Swiper,  SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+
+import s from "./Homepage.module.scss";
+
 import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
 import CardService from "../../components/CardService/CardService";
 import Header from "../../components/Header/Header";
 import ContactUs from "../../components/ContactUs/ContactUs";
-
-import s from "./Homepage.module.scss";
+import CardProcess from "../../components/CardProcess/CardProcess";
+import Review from "../../components/Review/Review";
 
 import HeroImg from "../../assets/homepage/hero.svg";
 import ProposalImg from "../../assets/homepage/proposal.svg";
@@ -31,7 +37,13 @@ import MichaelBrownImg from "../../assets/cardTeam/MichaelBrown.svg";
 import EmilyJohnsonImg from "../../assets/cardTeam/EmilyJohnson.svg";
 import BrianWilliamsImg from "../../assets/cardTeam/Brian Williams.svg";
 import SarahKimImg from "../../assets/cardTeam/SarahKim.svg";
-import CardProcess from "../../components/CardProcess/CardProcess";
+
+import ArrowLeftImg from "../../assets/testimonials/arrow-left.svg";
+import ArrowRightImg from "../../assets/testimonials/arrow-right.svg";
+import PointImg from "../../assets/testimonials/point.svg";
+// import SwiperReviews from "../../components/SwiperReviews/SwiperReviews";
+
+
 
 interface Company {
   id: number;
@@ -200,11 +212,36 @@ const PROCESS: Process[] = [
   },
 ];
 
+interface Review {
+  id: number;
+  name: string;
+  position: string;
+  text: string;
+}
+
+const REVIEWS: Review[] = [
+  {id: 1, name: "John Smith", position: "Marketing Director at XYZ Corp", text: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."},
+  {id: 2, name: "Stef Li", position: "Marketing at NI Corp", text: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."},
+  {id: 3, name: "Nick Baker", position: "Designer at U Corp", text: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."},
+  {id: 4, name: "Ryan Wayne", position: "Marketing Director at XYZ Corp", text: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."},
+  {id: 5, name: "Alex Kim", position: "Founder at WER Corp", text: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."},
+]
+
+
+export const handleScrollToSection = (sectionId: string) => {
+  const el = document.getElementById(sectionId);
+  if(el) {
+    el.scrollIntoView({behavior:'smooth', block: 'start'});
+  }
+}
+
 const Homepage = () => {
+  const [swiperInstance, setSwiperInstance] = useState<any>(null);
+
   return (
     <div>
       <div className="container">
-        <Header />
+        <Header onNavigate={handleScrollToSection}/>
         <section className={s.hero}>
           <div className={s.hero__wrapper}>
             <div className={s.hero__text}>
@@ -214,7 +251,7 @@ const Homepage = () => {
                 online through a range of services including SEO, PPC, social
                 media marketing, and content creation.
               </p>
-              <Button title="Book a consultation" />
+              <Button title="Book a consultation" onClick={() =>handleScrollToSection('contactUs')}/>
             </div>
             <div className={s.hero__img}>
               <img src={HeroImg} alt="hero-img" />
@@ -224,7 +261,6 @@ const Homepage = () => {
         <section className={s.companies}>
           <div className={s.companies__wrapper}>
             {COMPANIES.map((company) => {
-              //.concat(COMPANIES)
               return (
                 <div key={company.id} className={s.logo_companies__item}>
                   <img src={company.src} alt={company.name} />
@@ -233,28 +269,30 @@ const Homepage = () => {
             })}
           </div>
         </section>
+           
 
-        <Sections
-          title="Services"
-          subtitle="At our digital marketing agency, we offer a range of services to
-                help businesses grow and succeed online. These services include:"
-          width="px"
-          pWidth="580px"
-          body={
-            <section className={s.services}>
-              {SERVICES.map((item) => (
-                <CardService
-                  key={item.id}
-                  titleTop={item.titleTop}
-                  titleBottom={item.titleBottom}
-                  src={item.src}
-                  bgText={item.bgText}
-                  cardColor={item.cardColor}
-                />
-              ))}
-            </section>
-          }
-        />
+          <Sections
+            id="services"
+            title="Services"
+            subtitle="At our digital marketing agency, we offer a range of services to
+                  help businesses grow and succeed online. These services include:"
+            width="px"
+            pWidth="580px"
+            body={
+              <section className={s.services}>
+                {SERVICES.map((item) => (
+                  <CardService
+                    key={item.id}
+                    titleTop={item.titleTop}
+                    titleBottom={item.titleBottom}
+                    src={item.src}
+                    bgText={item.bgText}
+                    cardColor={item.cardColor}
+                  />
+                ))}
+              </section>
+            }
+          />
 
         <section className={s.proposal}>
           <div className={s.proposal__wrapper}>
@@ -264,14 +302,16 @@ const Homepage = () => {
                 Contact us today to learn more about how our digital marketing
                 services can help your business grow and succeed online.
               </p>
-              <Button title="Get your free proposal" />
+              <Button title="Get your free proposal" onClick={() => handleScrollToSection('contactUs')}/>
             </div>
             <div className={s.proposal__img}>
               <img src={ProposalImg} alt="proposal" />
             </div>
           </div>
         </section>
+
         <Sections
+          id="cases"
           title="Case Studies"
           subtitle="Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies"
           width="900px"
@@ -280,6 +320,7 @@ const Homepage = () => {
         />
 
         <Sections
+          id="about"
           title="Our Working Process"
           subtitle="Step-by-Step Guide to . Your Business Goals"
           width="770px"
@@ -313,16 +354,83 @@ const Homepage = () => {
                   text={item.text}
                 />
               ))}
-            </section>
+              <div className={s.team__btn}>
+                <Button title='See all team' onClick={()=> handleScrollToSection('contactUs')}/>
+              </div>
+              </section>
+            
           }
         />
+  
 
         <Sections
-          title="Contact Us"
-          subtitle="Connect with Us: Let's Discuss Your Digital Marketing Needs"
-          pWidth="320px"
-          body={<ContactUs />}
+          title="Testimonials"
+          subtitle="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
+          pWidth="480px"
+          width="800px"
+          body={
+            <div className={s.swiper_reviews}>
+              <div className={s.swiper_reviews__wrapper}>
+                  <Swiper
+                      modules={[ Pagination]}
+                      spaceBetween={40}
+                      slidesPerView={2.5}
+                      centeredSlides={true}
+                      navigation={{
+                        nextEl: `.${s.customNext}`,
+                        prevEl: `.${s.customPrev}`,
+                      }}
+                      pagination={{
+                        el: `.${s.controls__customPagination}`,
+                        clickable: true,
+                        renderBullet: (index, className) => {
+                          return `<span class="${className} ${s.controls__starBullet}">
+                            <img src="${PointImg}" alt="slider ${index + 1}" />
+                          </span>`;
+                        },
+                      }}
+                      onSwiper={(swiper) => setSwiperInstance(swiper)}
+                  >
+                      {REVIEWS.map(item => (
+                        <SwiperSlide key={item.id}>
+                          <Review 
+                            name={item.name} 
+                            position={item.position} 
+                            text={item.text} 
+                          />
+                    </SwiperSlide>
+                  ))}
+                  </Swiper>
+                </div>
+                  <div className={s.controls}>
+                    <div className={s.controls__wrapper}>
+                      <button   
+                        className={`${s.navBtn} ${s.customPrev}`}   
+                        onClick={() => swiperInstance?.slidePrev()}
+                        type="button">
+                        <img src={ArrowLeftImg} alt="Previous slide" />
+                      </button>
+              
+                      <div className={s.controls__customPagination}></div> 
+                      
+                      <button   
+                        className={`${s.navBtn} ${s.customNext}`}   
+                        onClick={() => swiperInstance?.slideNext()}
+                        type="button">
+                        <img src={ArrowRightImg} alt="Next slide" />
+                      </button>
+                    </div>
+                  </div>
+            </div>
+          }
         />
+          <Sections
+            id="contactUs"
+            title="Contact Us"
+            subtitle="Connect with Us: Let's Discuss Your Digital Marketing Needs"
+            pWidth="320px"
+            body={<ContactUs />}
+          />
 
         <Footer />
       </div>

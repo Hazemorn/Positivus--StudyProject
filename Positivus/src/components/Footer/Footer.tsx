@@ -12,15 +12,19 @@ const Footer = () => {
     <footer className={s.footer}>
             <div className={s.footer__wrapper}>
                 <div className={s.footer__top}>
-                <div className={s.footer__logo}><img src={LogoWhite} alt='logo'/></div>
+                <div className={s.footer__logo}>    
+                    <a href="#header">
+                        <img src={LogoWhite} alt='logo'/>        
+                    </a>
+                </div>
                 <div className={s.footer__nav}>
                     <nav>
                         <ul>
-                            <li><a href='#!'>About us</a></li>
-                            <li><a href='#!'>Services</a></li>
-                            <li><a href='#!'>Use Cases</a></li>
-                            <li><a href='#!'>Pricing</a></li>
-                            <li><a href='#!'>Blog</a></li>
+                            <li><a href='#about'>About us</a></li>
+                            <li><a href='#services'>Services</a></li>
+                            <li><a href='#cases'>Use Cases</a></li>
+                            <li><a href='#contactUs'>Pricing</a></li>
+                            <li><a href='#contactUs'>Blog</a></li>
                         </ul>
                     </nav>
                 </div>

@@ -1,6 +1,7 @@
 import s from './Section.module.scss';
 
 interface SectionsProps {
+    id?: string;
     title: string;
     subtitle: string;
     width?: string;
@@ -9,10 +10,10 @@ interface SectionsProps {
 }
 
 
-const Sections: React.FC<SectionsProps> = ({ title, subtitle, width = '700px', pWidth, body}) => {
+const Sections: React.FC<SectionsProps> = ({ id,title, subtitle, width = '700px', pWidth, body}) => {
     return (
          <>
-        <section className={s.sections}>
+        <section className={s.sections} id={id}>
             <div className={s.sections__wrapper}>
                 <div className={s.sections__top} style={{maxWidth: width}}>
                     <h2>{title}</h2>

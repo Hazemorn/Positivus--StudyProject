@@ -31,25 +31,11 @@
 
 .companies {
     &__wrapper {
-        padding-top: 70px;
+        padding: 70px 0;
         @include flex-hybrid(space-around, center);
-        //gap: 100px;
-        //width: max-content;
-        //padding-right: 60px;
-        //animation: scrollRight 5s linear infinite;
-        
-       //&:hover {
-       //     animation-play-state: paused;
-       // }
+
     }
     .logo_companies__item {
-        // flex-shrink: 0; 
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // width: 150px;
-        // width: 280px;
-        // padding: 0 80px;
         img {
             width: 100%;
             height: auto;
@@ -57,18 +43,10 @@
         }
     }
 }
-// @keyframes scrollRight {
-//     0% {
-//         transform: translateX(-50%);
-//     }
-//     100% {
-//         transform: translateX(0);
-//     }
-// }
 
 
 .proposal {
-    padding-top: 120px;
+    padding: 50px 0 70px;
     &__wrapper {
         @include flex-hybrid(space-between, center);
         background-color: var(--grey);
@@ -105,9 +83,62 @@
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
+    &__btn {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
 }
+
 
 .process {
     @include flex-dir(column);
     gap: 30px;
+}
+
+.swiper_reviews {
+    background-color: var(--black);
+    border-radius: 45px;
+    padding: 84px 0 68px;
+    width: 100%;
+
+    :global {
+        .swiper {
+            width: 100%;
+            overflow: hidden; 
+        }
+
+        .swiper-wrapper {
+            display: flex; 
+            flex-direction: row !important;
+        }
+
+        .swiper-slide {
+            flex-shrink: 0;
+            height: auto;
+        }
+    }
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 520px;
+        width: 100%;
+    }
+    &__customPagination {
+            display: flex;
+            gap: 10px;             
+            align-items: center;  
+    }
+    &__starBullet {
+        opacity: 0.1;  
+    }
+}
+:global(.swiper-pagination-bullet-active).controls__starBullet {
+    opacity: 1;              
 }

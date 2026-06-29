@@ -29,6 +29,7 @@ const CardProcess: React.FC<ProcessProps> = ({id, title, text}) => {
                     onClick={() => ClickHandler(id)}>
                 <h1>
                 {isOpen ? "+" : "−" }
+                {/* change it to icons of plus and minus */}
                 </h1>
                 </button>  
             </div>

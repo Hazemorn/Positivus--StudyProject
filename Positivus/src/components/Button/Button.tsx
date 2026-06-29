@@ -5,11 +5,12 @@ interface ButtonProps {
   max_width?: string;
   bgColor?: string;
   color?: string;
+  onClick?: () => void;
 }
 
-const Button = ({ title, bgColor = 'var(--dark)', max_width =' 280px', color ='var(--white)' }: ButtonProps) => {
+const Button = ({ title, bgColor = 'var(--dark)', max_width =' 280px', color ='var(--white)', onClick }: ButtonProps) => {
   return (
-    <button className={s.button__template} style={{ backgroundColor: bgColor, maxWidth:max_width, color: color }}>
+    <button onClick={onClick} className={s.button__template} style={{ backgroundColor: bgColor, maxWidth:max_width, color: color }}>
       {title}
     </button>
   );

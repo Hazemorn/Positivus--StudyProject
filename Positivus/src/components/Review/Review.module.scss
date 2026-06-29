@@ -1,0 +1,22 @@
+.review {
+    max-width: 610px;
+    &__wrapper {
+        background: url('../../assets/testimonials/bubble.svg') no-repeat center / 100% 100%;
+        width: 100%; 
+        max-height: 270px;
+        p {
+            padding: 48px 52px 110px;
+            color: var(--white);
+        }
+    }
+    &__author {
+        padding-top: 20px;
+        padding-left: 80px;
+        span {
+            color: var(--accent);
+        }
+        p {
+            color: var(--white);
+        }
+    }
+}

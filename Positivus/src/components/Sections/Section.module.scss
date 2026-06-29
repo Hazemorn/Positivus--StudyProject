@@ -1,7 +1,7 @@
 @use '../../assets/mixins.scss' as *;
 
 .sections {
-    padding-top: 140px;
+    padding: 70px 0;
     &__wrapper {
         @include flex-dir(column);
         gap: 80px;

@@ -4,7 +4,6 @@
     background-color: var(--grey);
     border-radius: 45px;
     @include border-card;
-    box-sizing: border-box;
     &.open {
         background-color: var(--accent);
     }
@@ -42,6 +41,12 @@
         transition: height 0.3;
         &.open {
             height: auto;
+        }
+    }
+    &_btn {
+        position: relative;
+        h1 {
+            bottom: 10px;
         }
     }
 }

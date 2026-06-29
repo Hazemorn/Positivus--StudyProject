@@ -67,3 +67,6 @@ a {
   color: var(--black);
 }
 
+html {
+  scroll-behavior: smooth; /* Включает плавный скролл вместо резкого прыжка */
+}

@@ -14,12 +14,12 @@ const CardTeam: React.FC<TeamProps> = ({src, name, position, text}) => {
         <section className={s.employee}>
             <div className={s.employee__wrapper}>
                 <div className={s.employee__top}>
-                    <img src={src} alt='Photo'/>
+                    <img src={src} alt='Photo' loading='lazy'/>
                     <div>
                         <h4>{name}</h4>
                         <p>{position}</p>
                     </div>
-                    <a href='#'> <img src={linkedIcon} alt='linkedIn'/></a>
+                    <a href='#'> <img src={linkedIcon} alt='linkedIn' loading='lazy'/></a>
                    
                 </div>
                 <div className={s.employee__bottom}>

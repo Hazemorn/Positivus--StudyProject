@@ -24,7 +24,7 @@ const CaseStudies = () => {
                         <div className={s.case__arrow}>
                             <a href="#">
                                 <span>Learn more</span>
-                                <img src={ArrowImg} alt="Arrow" />
+                                <img src={ArrowImg} alt="Arrow" loading='lazy'/>
                             </a>
                         </div>
                     </div>     

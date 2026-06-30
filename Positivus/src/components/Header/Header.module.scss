@@ -1,13 +1,15 @@
 @use '../../assets/mixins.scss' as *;
+@import '../../assets/_vars.scss'; 
 
 .header{
     &__wrapper {
         @include flex-hybrid(space-between, center);
         flex-direction: row;
         padding-top: 60px;
+        column-gap: 10px;
     }
     &__logo {
-        max-width: 220px;
+        max-width: clamp(110px, 15vw, 220px);
         max-height: 36px;
     }
     &__nav {
@@ -22,6 +24,7 @@
         nav ul {
             @include flex-dir(row);
             justify-content: space-between;
+            column-gap: 10px;
         }
        
     }
@@ -37,24 +40,79 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); 
         }
     }
+    &__burger {
+        display: none;
+    }
 }
 
 @media only screen 
-and (max-device-width: 1440px)
-and (min-device-width: 768px) {
+and (max-device-width: $screen-xl)
+and (min-device-width: $screen-md) {
     .header {
        width: 100%;
     }
     .mobile {
         display: none;
     }
+
+    
 }
 
+
 @media only screen
-and (max-device-width: 768px){
+and (max-width: $screen-md){
     .header {
         &__nav {
             display: none;
+        }
+        &__burger {
+            display: block;
+        }
+        &__button {
+            width: 100%;
+            max-width: 280px;
+            margin: 0 auto;
+            display: block;
+        }
     }
+    .mobile {
+        &_popup_menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--white); 
+            z-index: 10;
+            padding: 40px 24px;
+            
+            @include flex-hybrid(center,center);
+            flex-direction: column;
+           
+            .close {
+                position: absolute;
+                top: 24px;
+                right: 24px;
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+            }
+        }
+        &__nav {
+            width: 100%;
+            text-align: center;
+            
+            nav ul {
+                list-style: none;
+                margin: 0 0 40px 0; 
+                @include flex-dir(column);
+                row-gap: 24px; 
+                a {
+                    text-decoration: none;
+                    color: var(--black);
+                    font-weight: 500;
+                }
+            }
+        }
     }
 }

@@ -22,7 +22,7 @@ const CardService: React.FC<ServiceProps> = ( {titleTop, titleBottom, src, bgTex
                     <span style={{backgroundColor: bgText}}>{titleBottom}</span>
                 </h3>
                 <a href='#'>
-                    <img src={arrowImg} alt='arrow'/>
+                    <img src={arrowImg} alt='arrow' loading='lazy'/>
                     <span className={s.learnMore}>Learn more</span>
                 </a>
             </div>

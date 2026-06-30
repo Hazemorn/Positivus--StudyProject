@@ -33,6 +33,8 @@
     &__wrapper {
         padding: 70px 0;
         @include flex-hybrid(space-around, center);
+        flex-wrap: wrap;
+        gap: 20px;
 
     }
     .logo_companies__item {
@@ -83,6 +85,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
+    justify-content: center;
     &__btn {
         width: 100%;
         display: flex;
@@ -141,4 +144,24 @@
 }
 :global(.swiper-pagination-bullet-active).controls__starBullet {
     opacity: 1;              
+}
+
+
+@media only screen  
+and (max-width: 1300px)  
+and (min-width: 768px) {
+    .hero {
+        &__text {
+            max-width: 50%;
+        }
+    }
+}
+
+@media only screen
+and (max-width: 768px) {
+    .proposal {
+        &__img {
+            display: none;
+        }
+    }
 }

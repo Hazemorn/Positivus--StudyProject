@@ -14,7 +14,7 @@ const Footer = () => {
                 <div className={s.footer__top}>
                 <div className={s.footer__logo}>    
                     <a href="#header">
-                        <img src={LogoWhite} alt='logo'/>        
+                        <img src={LogoWhite} alt='logo' loading='lazy'/>        
                     </a>
                 </div>
                 <div className={s.footer__nav}>
@@ -30,13 +30,13 @@ const Footer = () => {
                 </div>
                 <div className={s.footer__socials}>
                     <a href="https://linkedIn.com" target="_blank" rel="noopener noreferrer">
-                        <img src={LinkedInImg} alt='linkedIn'/>
+                        <img src={LinkedInImg} alt='linkedIn' loading='lazy'/>
                     </a>
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                        <img src={FacebookImg} alt='facebook'/>
+                        <img src={FacebookImg} alt='facebook' loading='lazy'/>
                     </a>
                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                        <img src={TwitterImg} alt='twitter'/>
+                        <img src={TwitterImg} alt='twitter' loading='lazy'/>
                     </a>
                 </div>
                 </div>

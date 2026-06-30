@@ -254,7 +254,7 @@ const Homepage = () => {
               <Button title="Book a consultation" onClick={() =>handleScrollToSection('contactUs')}/>
             </div>
             <div className={s.hero__img}>
-              <img src={HeroImg} alt="hero-img" />
+              <img src={HeroImg} alt="hero-img" loading='lazy'/>
             </div>
           </div>
         </section>
@@ -305,7 +305,7 @@ const Homepage = () => {
               <Button title="Get your free proposal" onClick={() => handleScrollToSection('contactUs')}/>
             </div>
             <div className={s.proposal__img}>
-              <img src={ProposalImg} alt="proposal" />
+              <img src={ProposalImg} alt="proposal" loading='lazy'/>
             </div>
           </div>
         </section>
@@ -385,7 +385,7 @@ const Homepage = () => {
                         clickable: true,
                         renderBullet: (index, className) => {
                           return `<span class="${className} ${s.controls__starBullet}">
-                            <img src="${PointImg}" alt="slider ${index + 1}" />
+                            <img src="${PointImg}" alt="slider ${index + 1}" loading='lazy'/>
                           </span>`;
                         },
                       }}
@@ -408,7 +408,7 @@ const Homepage = () => {
                         className={`${s.navBtn} ${s.customPrev}`}   
                         onClick={() => swiperInstance?.slidePrev()}
                         type="button">
-                        <img src={ArrowLeftImg} alt="Previous slide" />
+                        <img src={ArrowLeftImg} alt="Previous slide" loading='lazy'/>
                       </button>
               
                       <div className={s.controls__customPagination}></div> 
@@ -417,7 +417,7 @@ const Homepage = () => {
                         className={`${s.navBtn} ${s.customNext}`}   
                         onClick={() => swiperInstance?.slideNext()}
                         type="button">
-                        <img src={ArrowRightImg} alt="Next slide" />
+                        <img src={ArrowRightImg} alt="Next slide" loading='lazy'/>
                       </button>
                     </div>
                   </div>

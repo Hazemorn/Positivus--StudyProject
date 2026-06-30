@@ -60,7 +60,7 @@ const ContactUs = () => {
             </div>
 
             <div className={s.contact_us__img}>
-              <img src={contactUsImg} alt="contactUs__img" />
+              <img src={contactUsImg} alt="contactUs__img" loading='lazy' />
             </div>
           </div>
       </section>

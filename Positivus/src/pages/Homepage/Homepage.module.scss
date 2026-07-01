@@ -26,6 +26,9 @@
             height: auto;
             display: block;
         }
+        &_mobile {
+            display: none;
+        }
     }
 }
 
@@ -147,7 +150,7 @@
 }
 
 
-@media only screen  
+@media screen  
 and (max-width: 1300px)  
 and (min-width: 768px) {
     .hero {
@@ -157,11 +160,30 @@ and (min-width: 768px) {
     }
 }
 
-@media only screen
+@media screen
 and (max-width: 768px) {
+    .hero {
+        @include flex-hybrid(center, center);
+        &__text {
+            align-items: center;
+        }
+        &__img {
+            &_desktop {
+                display: none;
+            }
+            &_mobile {
+                display: flex;
+                max-width: 365px;
+            }
+        }
+    }
+
     .proposal {
         &__img {
             display: none;
         }
+    }
+    .controls {
+        padding: 0 30px;
     }
 }

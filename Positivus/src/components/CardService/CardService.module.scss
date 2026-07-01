@@ -1,7 +1,7 @@
 @use '../../assets/mixins.scss' as *;
 
 .service {
-    max-width: 700px;
+    max-width: 600px;
     border-radius: 45px;
     width: 100%; 
     @include border-card;
@@ -12,6 +12,9 @@
             .learnMore {
                 color: var(--white);
             }
+        }
+        img {
+            max-width: clamp(50%, 30vw ,100%);
         }
     }
 

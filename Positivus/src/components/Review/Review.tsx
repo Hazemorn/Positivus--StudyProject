@@ -11,7 +11,7 @@ const Review:React.FC<ReviewProps> = ({ name, position, text }) => {
     <div className={s.review}>
       <div className={s.review__wrapper}>
           <p>
-            {text}
+            "{text}"
           </p>
 
       </div>

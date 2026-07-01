@@ -8,7 +8,7 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-const Button = ({ title, bgColor = 'var(--dark)', max_width =' 280px', color ='var(--white)', onClick }: ButtonProps) => {
+const Button = ({ title, bgColor = 'var(--dark)', max_width, color ='var(--white)', onClick }: ButtonProps) => {
   return (
     <button onClick={onClick} className={s.button__template} style={{ backgroundColor: bgColor, maxWidth:max_width, color: color }}>
       {title}

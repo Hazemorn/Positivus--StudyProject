@@ -1,5 +1,4 @@
 @use '../../assets/mixins.scss' as *;
-@import '../../assets/_vars.scss'; 
 
 .header{
     &__wrapper {
@@ -45,9 +44,9 @@
     }
 }
 
-@media only screen 
-and (max-device-width: $screen-xl)
-and (min-device-width: $screen-md) {
+@media screen 
+and (max-device-width: 1300px)
+and (min-device-width: 768px) {
     .header {
        width: 100%;
     }
@@ -59,8 +58,8 @@ and (min-device-width: $screen-md) {
 }
 
 
-@media only screen
-and (max-width: $screen-md){
+@media screen
+and (max-width: 768px){
     .header {
         &__nav {
             display: none;

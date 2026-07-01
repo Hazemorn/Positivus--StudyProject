@@ -28,7 +28,7 @@ const Footer = () => {
                         </ul>
                     </nav>
                 </div>
-                <div className={s.footer__socials}>
+                <div className={`${s.footer__socials} ${s.desktop}`}>
                     <a href="https://linkedIn.com" target="_blank" rel="noopener noreferrer">
                         <img src={LinkedInImg} alt='linkedIn' loading='lazy'/>
                     </a>
@@ -52,6 +52,17 @@ const Footer = () => {
                         <input type='email' name='email' placeholder="Email" autoComplete="email" minLength={5} maxLength={50}/>
                         <Button title='Subscribe to news' bgColor='var(--accent)' color='var(--black)'/>
                     </div>
+                </div>
+                <div className={`${s.footer__socials} ${s.mobile}`}>
+                    <a href="https://linkedIn.com" target="_blank" rel="noopener noreferrer">
+                        <img src={LinkedInImg} alt='linkedIn' loading='lazy'/>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <img src={FacebookImg} alt='facebook' loading='lazy'/>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                        <img src={TwitterImg} alt='twitter' loading='lazy'/>
+                    </a>
                 </div>
                 <hr className={s.footer__lineSeparator}/>
                 <div className={s.footer__license}>

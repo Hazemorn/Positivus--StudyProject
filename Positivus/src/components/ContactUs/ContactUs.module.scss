@@ -1,5 +1,4 @@
 @use '../../assets/mixins.scss' as *;
-@import '../../assets/_vars.scss'; 
 
 .contact_us {
     &__body {
@@ -84,15 +83,20 @@
    
 }
 
-@media only screen  
-and (max-width: $screen-md) {
+@media screen  
+and (max-width: 768px) {
     .contact_us{
+        &__body {
+            @include flex-hybrid(center, center);
+            width: 100%;
+        }
         &__img {
         display: none;
+        }
+        &__text {
+        
+            width: 100%;
+            padding: 40px 30px;
+        }
     }
-    &__text {
-        width: 100%;
-        padding: 40px 30px;
-    }
-}
 }

@@ -41,7 +41,6 @@ import SarahKimImg from "../../assets/cardTeam/SarahKim.svg";
 import ArrowLeftImg from "../../assets/testimonials/arrow-left.svg";
 import ArrowRightImg from "../../assets/testimonials/arrow-right.svg";
 import PointImg from "../../assets/testimonials/point.svg";
-// import SwiperReviews from "../../components/SwiperReviews/SwiperReviews";
 
 
 
@@ -228,6 +227,7 @@ const REVIEWS: Review[] = [
 ]
 
 
+
 export const handleScrollToSection = (sectionId: string) => {
   const el = document.getElementById(sectionId);
   if(el) {
@@ -246,6 +246,9 @@ const Homepage = () => {
           <div className={s.hero__wrapper}>
             <div className={s.hero__text}>
               <h1>Navigating the digital landscape for success</h1>
+              <div className={`${s.hero__img} ${s.hero__img_mobile}`}>
+                <img src={HeroImg} alt="heroImg" loading='lazy'/>
+              </div>
               <p>
                 Our digital marketing agency helps businesses grow and succeed
                 online through a range of services including SEO, PPC, social
@@ -253,8 +256,8 @@ const Homepage = () => {
               </p>
               <Button title="Book a consultation" onClick={() =>handleScrollToSection('contactUs')}/>
             </div>
-            <div className={s.hero__img}>
-              <img src={HeroImg} alt="hero-img" loading='lazy'/>
+            <div className={`${s.hero__img} ${s.hero__img_desktop}`}>
+              <img src={HeroImg} alt="heroImg" loading='lazy'/>
             </div>
           </div>
         </section>
@@ -372,14 +375,15 @@ const Homepage = () => {
             <div className={s.swiper_reviews}>
               <div className={s.swiper_reviews__wrapper}>
                   <Swiper
-                      modules={[ Pagination]}
-                      spaceBetween={40}
-                      slidesPerView={2.5}
-                      centeredSlides={true}
-                      navigation={{
-                        nextEl: `.${s.customNext}`,
-                        prevEl: `.${s.customPrev}`,
+                      modules={[Pagination]}
+                      slidesPerView={1}
+                      breakpoints={{
+                        768: {
+                          slidesPerView: 2,
+                          spaceBetween: 20
+                        }
                       }}
+                      centeredSlides={true}
                       pagination={{
                         el: `.${s.controls__customPagination}`,
                         clickable: true,
@@ -432,8 +436,9 @@ const Homepage = () => {
             body={<ContactUs />}
           />
 
-        <Footer />
+        
       </div>
+      <Footer />
     </div>
   );
 };

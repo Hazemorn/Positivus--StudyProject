@@ -1,22 +1,87 @@
+@use '../../assets/mixins.scss' as *;
+
 .review {
-    max-width: 610px;
+    width: 100%;
+    max-width: 630px;
+   
     &__wrapper {
-        background: url('../../assets/testimonials/bubble.svg') no-repeat center / 100% 100%;
+        background: url('../../assets/testimonials/bubble.svg') no-repeat center / contain;// 100% 100%;
         width: 100%; 
-        max-height: 270px;
+       @include flex-hybrid(center, center);
         p {
-            padding: 48px 52px 110px;
+            padding: clamp(35px, 8%, 48px) clamp(35px, 10%, 55px) clamp(70px, 15%, 110px);
+            box-sizing: border-box;
             color: var(--white);
+            font-size: clamp(14px, 1.2vw, 18px);
+            line-height: 1.5;
         }
     }
     &__author {
         padding-top: 20px;
-        padding-left: 80px;
+        padding-left: clamp(20px, 20vw, 80px);
         span {
             color: var(--accent);
         }
         p {
             color: var(--white);
+        }
+    }
+}
+
+@media screen   
+and (max-width: 955px)
+and (min-width: 768px) {
+    .review { 
+        max-width: 100%;
+        @include flex-hybrid(center, center);
+        flex-direction: column;
+        &__wrapper {
+            background: url('../../assets/testimonials/vertical.svg') no-repeat center / contain;
+            width: 100%; 
+            max-height: 500px;
+            height: 100%;
+            p {
+                width: 85%; 
+                padding: clamp(35px, 12%, 50px) 25px clamp(60px, 18%, 85px);
+            }
+        }
+    }
+}
+
+@media screen   
+and (max-width: 768px)
+and (min-width: 457px) {
+    .review { 
+        max-width: 100%;
+        @include flex-hybrid(center, center);
+        flex-direction: column;
+        &__wrapper {
+            background: url('../../assets/testimonials/bubble.svg') no-repeat center / contain;// 100% 100%;
+            width: 100%; 
+            max-height: 500px;
+            height: 100%;
+            p {
+                width: 85%; 
+                padding: clamp(35px, 12%, 50px) 25px clamp(60px, 18%, 85px);
+            }
+        }
+    }
+}
+@media screen   
+and (max-width: 456px) {
+    .review { 
+        max-width: 100%;
+        @include flex-hybrid(center, center);
+        flex-direction: column;
+        &__wrapper {
+            background: url('../../assets/testimonials/vertical.svg') no-repeat center / contain;
+            width: 100%; 
+            max-height: 500px;
+            height: 100%;
+            p {
+                width: 85%; 
+                padding: clamp(35px, 12%, 50px) 25px clamp(60px, 18%, 85px);
+            }
         }
     }
 }

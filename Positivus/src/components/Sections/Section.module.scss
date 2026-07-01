@@ -12,3 +12,15 @@
         gap: 40px;
     }
 }
+
+@media screen   
+and (max-width: 768px) {
+    .sections {
+        &__wrapper {
+            gap: 40px;
+        }
+        &__top {
+            flex-direction: column;
+        }
+    }
+}

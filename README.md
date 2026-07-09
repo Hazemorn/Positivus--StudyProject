@@ -1,3 +1,40 @@
+<h1 align="center">Positivus</h1> 
+  
+---
+
+## 📝 Description
+The Positivus Application is a study project designed to showcase a modern, responsive landing page for a creative agency, built to practice React, Redux, TypeScript, and semantic HTML/CSS layouts. The project features a fully adaptive design, ensuring a seamless user experience across all devices, from desktop monitors to mobile phones.
+
+
+---
+
+## Screenshot-desktop
+
+
+---
+
+## Screencast-mobile
+
+
+---
+
+## GitHub Pages for a live demo preview
+https://hazemorn.github.io/Positivus--StudyProject/
+
+---
+
+## 🛠️ Tech Stack
+- React Vite
+- SASS, BEM
+- TypeScript
+
+---
+
+
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

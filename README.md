@@ -10,11 +10,20 @@ The Positivus Application is a study project designed to showcase a modern, resp
 
 ## Screenshot-desktop
 
+<img width="3360" height="16292" alt="positivus-desktop" src="https://github.com/user-attachments/assets/26b80a96-a383-4794-97b4-31d64ab695e8" />
 
 ---
 
 ## Screencast-mobile
 
+
+https://github.com/user-attachments/assets/acd2b85f-0875-45f2-b9ba-9d842b98b819
+
+
+---
+
+## 🔗 Links
+[https://www.figma.com/design/ODvu3zvuKToCLy4mwq5JfI/Wishbone?node-id=0-1&t=UlrN4biMI55IEUPj-1](https://www.figma.com/design/rGUpGAknO0cJg7wqd5LrXZ/Positivus-Landing-Page-Design--Community-?m=auto&is-community-duplicate=1&fuid=1156643371164916087)
 
 ---
 
@@ -30,6 +39,10 @@ https://hazemorn.github.io/Positivus--StudyProject/
 
 ---
 
+## ⏳ In Progress (Roadmap)
+
+- [ ] Add animation.
+- [ ] Optimize and refactor CSS code for better maintainability.
 
 
 

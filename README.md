@@ -3,7 +3,7 @@
 ---
 
 ## 📝 Description
-The Positivus Application is a study project designed to showcase a modern, responsive landing page for a creative agency, built to practice React, Redux, TypeScript, and semantic HTML/CSS layouts. The project features a fully adaptive design, ensuring a seamless user experience across all devices, from desktop monitors to mobile phones.
+The Positivus Application is a study project designed to showcase a modern, responsive landing page for a creative agency, built to practice React, TypeScript, and semantic HTML/CSS layouts. The project features a fully adaptive design, ensuring a seamless user experience across all devices, from desktop monitors to mobile phones.
 
 
 ---

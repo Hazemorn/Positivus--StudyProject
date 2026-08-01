@@ -41,7 +41,6 @@ https://hazemorn.github.io/Positivus--StudyProject/
 
 ## ⏳ In Progress (Roadmap)
 
-- [ ] Add animation.
 - [ ] Optimize and refactor CSS code for better maintainability.
 
 

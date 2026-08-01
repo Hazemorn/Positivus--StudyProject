@@ -6,6 +6,7 @@
         border-radius: 45px;
         padding: 70px 60px 93px;
         height: 100%; 
+        @include fade-in-right;
     }
 
     &__content {

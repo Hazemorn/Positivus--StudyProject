@@ -12,3 +12,69 @@
     border: 1px solid var(--black);
     border-bottom-width: 5px;
 }
+
+@keyframes fade-in {
+    from { 
+        translate: -25vw;
+        opacity: 0; 
+    }
+}
+
+@keyframes fade-in-right {
+    from {
+        translate: 25vw;
+        opacity: 0;
+    }
+}
+
+@keyframes show {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes reveal {
+	from {
+		opacity: 0;
+		clip-path: inset(45% 20% 45% 20%);
+	}
+	to {
+		opacity: 1;
+		clip-path: inset(0% 0% 0% 0%);
+	}
+}
+
+
+@mixin fade-in-left( $start, $end) {
+    animation-name: fade-in;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    view-timeline-name: --fade-in-section;
+    animation-timeline: --fade-in-section;
+    animation-range: $start $end; //20% 50%;
+}
+
+@mixin fade-in-right {
+    animation-name: fade-in-right;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    view-timeline-name: --fade-in-right-section;
+    animation-timeline: --fade-in-right-section;
+    animation-range: 20% 50%;
+}
+
+@mixin showCard {
+    animation-name: show;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    view-timeline-name: --show-section;
+    animation-timeline: --show-section;
+    animation-range: 20% 50%;
+}
+
+@mixin revealCard {
+    view-timeline-name: --revealing-image;
+	view-timeline-axis: block;
+    animation: linear reveal both;
+	animation-timeline: --revealing-image;
+    animation-range: entry 25% cover 50%;
+}

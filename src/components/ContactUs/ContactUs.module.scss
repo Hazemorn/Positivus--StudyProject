@@ -1,11 +1,13 @@
 @use '../../assets/mixins.scss' as *;
 
 .contact_us {
+    @include showCard;
     &__body {
         @include flex-dir(row);
         justify-content: space-between;
         background-color: var(--grey);
         border-radius: 45px;
+        margin-bottom: 20px
     }
     &__text {
         @include flex-dir(column);

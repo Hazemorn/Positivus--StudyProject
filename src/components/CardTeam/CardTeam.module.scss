@@ -5,11 +5,12 @@
     width: 100%;
     border-radius: 45px;
     @include border-card;
-
+    @include showCard;
     &__wrapper {
         padding: 40px 35px 63px;
         @include flex-dir(column);
         gap: 28px;
+        
     }
 
     &__top {

@@ -7,15 +7,21 @@ The Positivus Application is a study project designed to showcase a modern, resp
 
 
 ---
+## Screenсast-desktop
 
+https://github.com/user-attachments/assets/cbf65a29-b8b3-4d4e-b5bb-b692057e3c89
+
+
+---
 ## Screenshot-desktop
 
 <img width="3280" height="16384" alt="positivusScreen" src="https://github.com/user-attachments/assets/6e4ad5c3-fe8b-47c3-8e04-9e2152d3d07a" />
 
+
+
 ---
 
 ## Screencast-mobile
-
 
 https://github.com/user-attachments/assets/acd2b85f-0875-45f2-b9ba-9d842b98b819
 
